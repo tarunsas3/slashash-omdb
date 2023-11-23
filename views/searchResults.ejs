@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <title>Search Results</title>
+  <link rel="stylesheet" href="/public/css/searchStyles.css">
+  <title>Slashash OMDB | Results</title>
 </head>
 <body>
-  <div class="container mt-5">
+  <div class="searchContainer">
     <% movies.forEach(movie => { %>
-      <div class="card mb-3">
-        <img src="<%= movie.Poster %>" class="card-img-top" alt="<%= movie.Title %>">
+      <div class="card">
+        <img src="<%= movie.Poster %>" alt="<%= movie.Title %>">
         <div class="card-body">
           <h5 class="card-title"><%= movie.Title %></h5>
           <p class="card-text">Year: <%= movie.Year %></p>
@@ -20,9 +20,6 @@
       </div>
     <% }) %>
   </div>
-
-  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function () {
       $('.save-favorite').click(function () {
@@ -32,7 +29,6 @@
         const poster = $(this).data('poster');
 
         $.post('/save-favorite', { title, year, type, poster }, function (data) {
-          alert(data);
         });
       });
     });

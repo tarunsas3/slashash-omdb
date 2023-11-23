@@ -1,17 +1,16 @@
-<!-- views/favorites.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <title>Favorites</title>
+  <link rel="stylesheet" href="/public/css/searchStyles.css">
+  <title>Slashash OMDB | Favorites</title>
 </head>
 <body>
-  <div class="container mt-5">
+  <div class="searchContainer">
     <% favorites.forEach(favorite => { %>
-      <div class="card mb-3">
-        <img src="<%= favorite.poster %>" class="card-img-top" alt="<%= favorite.title %>">
+      <div class="card">
+        <img src="<%= favorite.poster %>" alt="<%= favorite.title %>">
         <div class="card-body">
           <h5 class="card-title"><%= favorite.title %></h5>
           <p class="card-text">Year: <%= favorite.year %></p>
@@ -20,7 +19,5 @@
       </div>
     <% }) %>
   </div>
-
-  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

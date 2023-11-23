@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-  <title>Movie Search</title>
+  <link rel="stylesheet" href="/public/css/homeStyles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyqD7DByUnsI3jUnF5+X6Fq5lsI9BX0p1" crossorigin="anonymous">
+  <title>Slashash OMDB | Home</title>
 </head>
 <body>
   <div class="container mt-5">
-    <form action="/search" method="post">
-      <div class="mb-3">
-        <label for="searchInput" class="form-label">Enter movie title:</label>
-        <input type="text" class="form-control" id="searchInput" name="searchInput" required>
+    <h1>Welcome to Slashash OMDB</h1>
+    <h3>The #1 movie destination for all you nerds out there</h3>
+  </div>
+  <div class="search mt-5">
+    <form action="/search" method="post" autocomplete="off">
+      <div class="searchInput mb-3">
+        <input autocomplete="false" name="hidden" type="text" style="display:none;">
+        <input type="text" class="form-control" id="searchInput" name="searchInput" required placeholder="Enter a Movie Name">
       </div>
       <button type="submit" class="btn btn-primary">Search</button>
     </form>

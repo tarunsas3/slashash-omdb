@@ -1,0 +1,56 @@
+* {
+  font-family: "Cascadia Code", "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 5rem 0rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body .container {
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+body .container h1 {
+  font-size: 48px;
+  font-weight: bolder;
+}
+body .container h3 {
+  margin-top: 1rem;
+  font-size: 32px;
+  font-weight: 300;
+}
+body .search form .searchInput input {
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  border: 1px solid green;
+  margin-bottom: 1.25rem;
+}
+body .search form .searchInput input::-moz-placeholder {
+  font-weight: bold;
+}
+body .search form .searchInput input::placeholder {
+  font-weight: bold;
+}
+body .search form button {
+  padding: 0.5rem;
+  width: 100px;
+  border-radius: 0.25rem;
+  outline: none;
+  border: none;
+  background: green;
+  color: white;
+  font-weight: bolder;
+}

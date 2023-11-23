@@ -23,13 +23,14 @@ db.connect((err) => {
   console.log("Connected to MySQL as id " + db.threadId);
 });
 
+app.use("/public", express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(
-  "/bootstrap",
-  express.static(__dirname + "/node_modules/bootstrap/dist")
-);
+// app.use(
+//   "/bootstrap",
+//   express.static(__dirname + "/node_modules/bootstrap/dist")
+// );
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
